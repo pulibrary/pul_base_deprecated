@@ -1,0 +1,31 @@
+// Hide the toolbar or admin menu on small screens.
+@media all and (max-width: 800px) {
+  #toolbar, #admin-menu {
+    display: none;
+  }
+
+  html {
+    body.toolbar, body.admin-menu {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+  }
+}
+
+
+.summary-count {
+    display: none;
+}
+
+.float-left {
+    float: left;
+}
+
+span.icon-article-express--small-after {
+  font-size: 11px;
+}
+
+//hack hide aka titles for db
+.subject-landing-page .views-row .field--name-field-dboverride-database article header {
+    display: none;
+}
