@@ -1551,8 +1551,21 @@ table caption {
   content: "(\e614)";
 }
 
+.page-node-6627 h1:after,
 .icon-article-express--small-after:after {
   content: "(\e615)";
+}
+
+.page-node-6627 h1:after {
+  font-family: 'pul_base_theme';
+  speak: none;
+  font-size: 0.75em;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* CDL Menu */
@@ -2222,16 +2235,19 @@ body.faq .ui-accordion .ui-accordion-header a {
   display: inline-block;
   border: 1px #1a1f25 solid;
 }
-.l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item-query,
-.l-region--branding .block--search-form form > div div.form-item-query {
+.l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item-query, .l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item,
+.l-region--branding .block--search-form form > div div.form-item-query,
+.l-region--branding .block--search-form form > div div.form-item {
   position: relative;
 }
-.l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item-query label,
-.l-region--branding .block--search-form form > div div.form-item-query label {
+.l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item-query label, .l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item label,
+.l-region--branding .block--search-form form > div div.form-item-query label,
+.l-region--branding .block--search-form form > div div.form-item label {
   display: none;
 }
-.l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item-query input[type=text],
-.l-region--branding .block--search-form form > div div.form-item-query input[type=text] {
+.l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item-query input[type=text], .l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item input[type=text],
+.l-region--branding .block--search-form form > div div.form-item-query input[type=text],
+.l-region--branding .block--search-form form > div div.form-item input[type=text] {
   -moz-appearance: none;
   -webkit-appearance: none;
   width: 100%;
