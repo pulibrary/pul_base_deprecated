@@ -16,15 +16,15 @@ module.exports = function (grunt) {
             consolidateMediaQueries:    true
           },
           files: {
-            'snippets/css/pul-base.libguides.css': 'css/pul-base.libguides.css'
+            'snippets/pul-base.libguides.css': 'css/pul-base.libguides.css'
           }
         }
       },
 
       cssmin: {
         build: {
-          src: 'snippets/css/pul-base.libguides.css',
-          dest: 'snippets/css/pul-base.libguides.min.css'
+          src: 'snippets/pul-base.libguides.css',
+          dest: 'snippets/pul-base.libguides.min.css'
         }
       },
 
