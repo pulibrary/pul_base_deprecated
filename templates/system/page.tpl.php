@@ -103,7 +103,7 @@
   </header>
 
   <section class="l-main test">
-    <div class="l-content" role="main">
+    <main class="l-content" role="main">
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
@@ -121,7 +121,7 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
-    </div>
+    </main>
 
     <?php print render($page['sidebar_first']); ?>
     <?php print render($page['sidebar_second']); ?>

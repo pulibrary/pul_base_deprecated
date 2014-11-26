@@ -62,14 +62,6 @@ module.exports = function (grunt) {
         }
       },
 
-      registry: {
-        files: ['*.info', '{,**}/*.{php,inc}'],
-        tasks: ['shell'],
-        options: {
-          livereload: false
-        }
-      },
-
       shell: {
         all: {
           command: 'drush cache-clear theme-registry'
@@ -78,7 +70,8 @@ module.exports = function (grunt) {
 
   });
 
-  grunt.registerTask('default',   []);
-  grunt.registerTask('tigerstyle',  ['compass', 'cssc', 'cssmin']);
+  grunt.registerTask('default',   ['']);
+  grunt.registerTask('build', ['compass', 'jshint', 'shell']);
+  grunt.registerTask('tigerstyle',  ['cssc', 'cssmin']);
 
 };
