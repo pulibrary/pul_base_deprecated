@@ -71,7 +71,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default',   ['']);
-  grunt.registerTask('build', ['compass', 'jshint', 'shell']);
+  grunt.registerTask('build', ['compass', 'shell']);
   grunt.registerTask('tigerstyle',  ['cssc', 'cssmin']);
 
 };
