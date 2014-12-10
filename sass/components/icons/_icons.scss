@@ -21,7 +21,7 @@
     }
 }
 
-.format-type, .summon-format-type, .all-format-type, .section-research, .pul_base_nine_three-region--second, .views-libraries.contextual-links-region, .view-search-libraries-and-collections, .view-general-site-user-search {
+.format-type, .summon-format-type, .all-format-type, .section-research, .pul_base_nine_three-region--second, .views-libraries.contextual-links-region, .view-search-libraries-and-collections, .view-general-site-user-search, .view-branch-equiment-amenities {
     [class^="icon-"], 
     [class*=" icon-"] {
         margin-left: 0;
@@ -33,11 +33,12 @@
     }
 }
 
-.page-staff-directory, .pane-views-panes h2 {
+.page-staff-directory, .pane-views-panes h2, .view-libraries {
     [class^="icon-"], 
     [class*=" icon-"] {
         margin-left: 0;
-        margin-right: .35em;
+        margin-right: .25em;
+        font-size: 0.9em;
     }
 }
 
