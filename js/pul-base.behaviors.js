@@ -140,15 +140,15 @@
   };
 
   // Add a Hack for TBA
-  Drupal.behaviors.pulTbaHoursBehavior = {
-    attach: function (context) {
-      $('.library-hours', context).once('pul', function () {
-        $('.no-entry div').each(function () {
-          $(this).text('TBA');
-        });
-      });
-    }
-  }
+  // Drupal.behaviors.pulTbaHoursBehavior = {
+  //   attach: function (context) {
+  //     $('.library-hours', context).once('pul', function () {
+  //       $('.no-entry div').each(function () {
+  //         $(this).text('TBA');
+  //       });
+  //     });
+  //   }
+  // }
   
   Drupal.behaviors.pulTrackFooterMenuUsage = {
     attach: function (context) {
