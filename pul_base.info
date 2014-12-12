@@ -106,3 +106,8 @@ settings[omega_libraries][pie][status] = 1
 settings[omega_libraries][html5shiv][status] = 1
 settings[nice_menus_custom_css] = ""
 settings[favicon_mimetype] = image/vnd.microsoft.icon
+
+; ========================================
+; Github
+; ========================================
+project status url = 'https://github.com/pulibrary/pul_base'
