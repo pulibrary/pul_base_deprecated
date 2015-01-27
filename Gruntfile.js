@@ -11,20 +11,28 @@ module.exports = function (grunt) {
       cssc: {
         build: {
           options: {
-            consolidateViaDeclarations: true,
-            consolidateViaSelectors:    true,
-            consolidateMediaQueries:    true
+              sortSelectors: true,
+              lineBreaks: true,
+              sortDeclarations:true,
+              consolidateViaDeclarations:true,
+              consolidateViaSelectors:true,
+              consolidateMediaQueries:true,
+              sort:true,
+              safe:true
           },
           files: {
-            'snippets/pul-base.libguides.css': 'css/pul-base.libguides.css'
+              'snippets/pul-base.libguides.css': 'css/pul-base.libguides.css',
+              'snippets/pul-base.illiad.css': 'css/pul-base.illiad.css',
           }
         }
       },
 
       cssmin: {
         build: {
-          src: 'snippets/pul-base.libguides.css',
-          dest: 'snippets/pul-base.libguides.min.css'
+          files: {
+            'snippets/pul-base.libguides.min.css' : 'snippets/pul-base.libguides.css',
+            'snippets/pul-base.illiad.min.css' : 'snippets/pul-base.illiad.css',
+          }
         }
       },
 
@@ -70,8 +78,8 @@ module.exports = function (grunt) {
 
   });
 
-  grunt.registerTask('default',   ['']);
+  grunt.registerTask('default',   []);
   grunt.registerTask('build', ['compass', 'shell']);
-  grunt.registerTask('tigerstyle',  ['cssc', 'cssmin']);
+  grunt.registerTask('tigerstyle',  ['build', 'cssc', 'cssmin']);
 
 };
