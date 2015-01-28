@@ -75,7 +75,7 @@
     <div class="wrapper wrapper--branding">
       <section class="l-branding">
         <?php if ($logo): ?>
-          <a href="http://library.princeton.edu" title="Princeton University Library" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
         <?php endif; ?>
 
         <?php if ($site_name || $site_slogan): ?>
@@ -92,11 +92,6 @@
         <?php print render($page['branding']); ?>
       </section>
     </div>
-    <?php if ($page['child_branding']): ?>
-      <section class="l-branding--child">
-        <?php print render($page['child_branding']); ?>
-      </section>
-    <?php endif; ?>
     
     <?php print render($page['header']); ?>
     <div class="wrapper wrapper--navigation">
@@ -108,8 +103,12 @@
   </header>
 
   <section class="l-main test">
-    <main class="l-content" role="main">
-      <!--<?php print $breadcrumb; ?>-->
+    <div class="l-content" role="main">
+      <?php if(isset($node)): ?>
+        <?php if (arg(0) == 'database' || $node->type == 'database' || $node->type == 'alternative_database_title') print $breadcrumb; ?>
+      <?php endif; ?>
+
+
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
@@ -126,7 +125,7 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
-    </main>
+    </div>
 
     <?php print render($page['sidebar_first']); ?>
     <?php print render($page['sidebar_second']); ?>
