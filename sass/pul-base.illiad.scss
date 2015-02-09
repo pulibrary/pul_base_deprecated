@@ -50,7 +50,7 @@
 
   position: relative;
 
-  input[type=search] {
+  .f-criteria {
     @include appearance(none);
     @include box-sizing(border-box);
     @include transition(border-color);
@@ -67,17 +67,12 @@
     width: 100%;
   }
 
-  input[type=submit] {
+  .f-submit {
     @include button(flat, $base-accent-color);
     @include position(absolute, 0em 0em 0em null);
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     outline: none;
     padding: 5px 10px;
-
-    img {
-      height: 12px;
-      opacity: 0.7;
-    }
   }
 }
