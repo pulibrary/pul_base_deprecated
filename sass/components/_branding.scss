@@ -1,6 +1,6 @@
 // branding
 .wrapper--branding {
-    background-color: #494f57;
+    background-color: $gray-dark;
     min-height: 50px;
     border-top: 5px solid $orange;
 
@@ -38,7 +38,6 @@
 
     img {
         padding: 0 1em;
-        // display: block;
         margin: 0 auto;
         display: inline-block;
         vertical-align: middle;
