@@ -138,18 +138,7 @@
       });
     }
   };
-
-  // Add a Hack for TBA
-  // Drupal.behaviors.pulTbaHoursBehavior = {
-  //   attach: function (context) {
-  //     $('.library-hours', context).once('pul', function () {
-  //       $('.no-entry div').each(function () {
-  //         $(this).text('TBA');
-  //       });
-  //     });
-  //   }
-  // }
-  
+    
   Drupal.behaviors.pulTrackFooterMenuUsage = {
     attach: function (context) {
       $('.l-region--footer', context).once('pul', function () {
@@ -187,6 +176,24 @@
             ga('send', 'event', 'Library News', 'click', $(this).text() + ' Position ' + result_position);
             console.log('logging ' + $(this).text() + result_position);
           });
+        });
+      });
+    }
+  };
+
+
+  Drupal.behaviors.pulRewriteTempStaff = {
+    attach: function (context) {
+      $('.view-staff-department-list', context).once('pul', function () {
+        $('tbody a').each(function (index, value) {
+          var link = $(this).attr('href');
+          var update = link.replace(/temp_/, '');
+          $(this).attr('href', update);
+        });
+        $('tbody td.views-field-mail').each(function (index, value) {
+          var email = $(this).text();
+          var update = email.replace(/(temp_|_test)/, '');
+          $(this).text(update);
         });
       });
     }
