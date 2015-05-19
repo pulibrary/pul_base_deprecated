@@ -12,8 +12,8 @@
     font-size: $font-size-smaller;
     border: none;
     text-shadow: none;
-    background-color: $gray-light;
-    color: $orange-dark;
+    background-color: $gray-lightest;
+    color: $orange-darkest;
     padding: 1em;
     text-decoration: none;
     @include border-radius(3px);
@@ -27,8 +27,41 @@
         display: inline;
         padding: 3px 7px;
     }
+    &:visited {
+        color: $orange-darkest;
+        background-color: $gray-lightest;
+    }
+    &:hover, &:active {
+        color: $white;
+        background-color: $orange;
+        text-decoration: none;
+    }
 }
 
-.more-link a {
+.page-find-all .more-link a {
+    background-color: $gray-lightest;
+    color: $orange-darkest;
     float: none;
+    display: inline-block;
+    width: 100%;
+
+    &:after {
+        margin-left: .5em;
+        content: "\e625";
+        @include pul-icon;
+    }
+
+    @include breakpoint($tab) {
+        float: right;
+        font-size: 1em;
+        margin-bottom: 1em;  
+        background-color: $white;
+        color: $orange-darkest;
+        width: auto;
+
+            &:hover {
+                background-color: $orange;
+                color: $white;
+            }
+    }
 }

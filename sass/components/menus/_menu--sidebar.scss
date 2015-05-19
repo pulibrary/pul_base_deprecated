@@ -21,12 +21,12 @@
         }
 
         a.active, &.expanded a.active {
-                background: $blue;
+                background: $blue-lighter;
                 color: $white;
         }
 
         &.expanded {
-            background: lighten($blue, 40);
+            background: lighten($blue-lightest, 35);
             @include border-radius(4px);
         }
     }

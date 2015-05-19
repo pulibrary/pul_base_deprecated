@@ -119,6 +119,7 @@
 
       &:hover {
         color: $centered-navigation-color-hover;
+        text-decoration: none;
       }
     }
   }
@@ -163,7 +164,6 @@
       }
 
       &:after {
-        // content: '›';
         font-size: $font-size-larger;
         position: absolute;
         right: $centered-navigation-submenu-padding / 2;

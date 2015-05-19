@@ -52,14 +52,25 @@ h1 {
 h2 {
     @include adjust-font-size-to(1.3em);
     @include rhythm(0.75, 0, 0, 0.5, 1.3em);
-
-    a {
-        color: $orange-dark;
-    }
 }
 
 h3 {
     @include adjust-font-size-to(1.1em);
     @include rhythm(0.75, 0, 0, 0.5, 1.1em);
     font-family: $font-sans;
+}
+
+a {
+  @include transition(color 0.1s linear);
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue-darker;
+    text-decoration: underline;
+  }
+
+  &:active, &:focus {
+    color: $blue-darker;
+  }
 }

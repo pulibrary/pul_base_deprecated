@@ -15,10 +15,38 @@
 				.libraryh3lp .button--libraryh3lp {
 					font-size: $font-size-smaller;
 				}
+			    &:hover:before {
+			    	text-decoration: none;
+			    }
 			}
 
-			[class^="icon-"], [class*=" icon-"] {
+			[class^="ico-"]:before, [class*=" ico-"]:before {
 				margin-left: 0;
+				margin-right: 0.5em;
+				font-family: 'pul_base_theme';
+			    speak: none;
+			    font-style: normal;
+			    font-weight: normal;
+			    font-variant: normal;
+			    text-transform: none;
+			    line-height: 1;
+			    -webkit-font-smoothing: antialiased;
+			    display: inline-block;
+			}
+			.ico-chat:before {
+				content: "\e601";
+			}
+			.ico-mail:before {
+				content: "\f03b";
+			}
+			.ico-calendar:before {
+				content: "\e620";
+			}
+			.ico-phone:before {
+				content: "\e60e";
+			}
+			.ico-book:before {
+				content: "\e61d";
 			}
 
 		}
@@ -30,3 +58,4 @@
 		@include adjust-font-size-to(16px);
 	}
 }
+
