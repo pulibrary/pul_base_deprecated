@@ -22,7 +22,7 @@
       width: 100%;
 
       input {
-        @include box-sizing(border-box);
+        box-sizing: border-box;
         display: inline-block;
       }
 
@@ -47,6 +47,9 @@
       }
 
       input[type=submit] {
+        @include hidden();
+      } 
+      button {
           position: absolute;
           right: 0;
           top: 0;
@@ -55,13 +58,23 @@
           font-weight: normal;
           background-color: $gray-darker;
           color: $white;
-          @include border-top-left-radius(0);
-          @include border-bottom-left-radius(0);
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
 
           &:hover, &:focus {
             background-color: $orange;
           }
       }
     }
+  }
+}
+//buttons
+.section-resource .dbsearch-block-form > div button,
+.section-resource .summon-block-form > div button {
+  .icon-search {
+    margin-right: 0;
+  }
+  .hide-sm {
+    @include visually-hidden();
   }
 }
